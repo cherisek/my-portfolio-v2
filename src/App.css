@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto; 
+  max-width: 1400px;
+  width: 100%; 
+  min-height: 100vh; 
+  padding: 1rem;
+  font-family: "Public Sans", sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* navigation */
+
+.navigation-container {
+  display: flex; 
+  justify-content: space-between;
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .menu-icon.hamburger {
+    display: none;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    align-self: center;
+
+    .hamburger {
+      width: 24px;
+      height: 24px; 
+    }
+  }
+
+  .navigation-links {
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      gap: 5rem; 
+
+      a {
+        text-decoration: none;
+        color: #33323d; 
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    } 
+  }
+
+  @media only screen and (max-width: 520px) {
+    .menu-icon.hamburger {
+      display: block;
+    }
+
+    .menu-icon.close {
+      width: 18px; 
+      height: 18px; 
+    }
+
+    .navigation-links {
+      background-color: #33323D;
+      display: none;
+      position: absolute; 
+      top: 60px; 
+      right: 20px; 
+      width: 223px; 
+      border: 1px solid #eaeaeb;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+      ul {
+        flex-direction: column;
+        padding-left: 0;
+        gap: 2rem;
+      }
+
+      a {
+        color: #fff !important;
+      }
+    }
+
+    .navigation-links.open {
+      display: block;
+    }
+  }
+}
+
+/* header */ 
+
+header {
+  background-image: url("./images/hero.png");
+  background-size: cover;
+  background-position: top center;
+  height: 80vh;
+
+  .header-title {
+    width: 445px; 
+    height: 357px; 
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 43vh; 
+    display: flex; 
+    align-items: center;
+  }
+
+  .header-title-container {
+    width: 300px; 
+    height: 200px; 
+    text-align: left;
+  }
+
+  .header-title-intro {
+    font-family: "Ibarra Real Nova";
+    font-weight: bold;
+  }
+
+  .about-me {
+    background-color: #203a4c;
+    color: #fff; 
+    cursor: pointer;
+    display: flex; 
+    font-family: "Public Sans";
+    height: 48px; 
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    width: 200px; 
+  }
+
+  span {
+    background-image: url("./images/down-arrows.svg");
+  }
+}
