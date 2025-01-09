@@ -1,4 +1,4 @@
-import downArrowss from "../../images/downArrowss.svg";
+import downArrows from "../../images/downArrows.svg";
 
 export const Header = () => {
   return (
@@ -9,7 +9,7 @@ export const Header = () => {
             Hey, I’m Cherise Knox and I love bringing digital visions to life through web design.
           </h1>
           <button className="about-me">
-            <img src={downArrowss} alt="down-arrow" />
+            <img src={downArrows} alt="down-arrow" />
             About Me
           </button>
         </div>
