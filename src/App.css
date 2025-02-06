@@ -1,11 +1,20 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin: 0 auto; 
-  max-width: 1400px;
+  max-width: 1100px;
   width: 100%; 
   min-height: 100vh; 
   padding: 1rem;
@@ -111,15 +120,18 @@ header {
   background-image: url("./images/hero.png");
   background-size: cover;
   background-position: top center;
-  height: 80vh;
+  border-radius: 6px;
+  height: 60vh;
+  max-height: 60vh;
+  margin-bottom: 4rem;
 
   .header-title {
-    width: 445px; 
-    height: 357px; 
+    width: 360px; 
+    height: 360px; 
     background-color: #fff;
     border-radius: 6px;
     position: absolute;
-    top: 43vh; 
+    top: 22vh; 
     display: flex; 
     align-items: center;
   }
@@ -133,21 +145,145 @@ header {
   .header-title-intro {
     font-family: "Ibarra Real Nova";
     font-weight: bold;
+    margin-bottom: 2rem;
   }
 
-  .about-me {
+  .about-me-btn {
     background-color: #203a4c;
+    border: none;
     color: #fff; 
     cursor: pointer;
     display: flex; 
+    justify-content: space-between;
+    padding-right: 1rem;
     font-family: "Public Sans";
     height: 48px; 
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     width: 200px; 
+    height: 48px;
   }
 
-  span {
-    background-image: url("./images/down-arrows.svg");
+  .about-me-btn:hover {
+    background-color: #5fb4a2;
+  }
+
+  .arrows-container {
+    background-color: #33323d;
+    width: 48px;
+    height: 48px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-me-btn:hover .arrows-container {
+    background-color: #56a292;
+  }
+
+  .about-me-btn:hover .down-arrows path {
+    stroke: white;
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  .about-me-text {
+    align-self: center;
   }
 }
+
+.content {
+  flex: 1;
+}
+
+/* profile section */ 
+
+.profile-container {
+  display: flex;
+  font-family: "Public sans";
+  justify-content: space-between;
+  text-align: left;
+
+  .profile-img {
+    max-width: 500px; 
+    width: 500px; 
+    max-height: 600px; 
+  }
+
+  .about-me-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+
+    h1 {
+      font-family: "Ibarra Real Nova";
+      font-weight: bold;
+      text-transform: capitalize;
+      margin-bottom:  1rem;
+    }
+
+    p {
+      font-family: "Public sans";
+      line-height: 1.6; 
+      margin-bottom:  1rem;
+    }
+
+    .about-me-btn {
+      background-color: transparent;
+      border: 1px solid #33323d; 
+      cursor: pointer;
+      margin-bottom: 2rem;
+      max-width: 202px;
+      padding: 1rem; 
+      text-transform: uppercase;
+    }
+
+    .lines {
+      width: 100%; 
+      height: 2px;
+      background-color: #eaeaeb;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+/* footer */
+.footer-container {
+  background-color: #33323d;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .social-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .social-icons {
+    filter: brightness(0) invert(1);
+  }
+}
+
+
+@keyframes highlight {
+  0% { stroke-opacity: 0.25; }
+  33% { stroke-opacity: 1; }
+  66% { stroke-opacity: 0.5; }
+  100% { stroke-opacity: 0.25; }
+}
+
+.about-me-btn:hover .down-arrows .arrow-1  {
+  animation: highlight 1.5s infinite ease-in-out;
+}
+
+.about-me-btn:hover .down-arrows  .arrow-2 {
+  animation: highlight 1.5s infinite ease-in-out 0.5s;
+}
+
+.about-me-btn:hover .down-arrows .arrow-3 {
+  animation: highlight 1.5s infinite ease-in-out 1s;
+}
+

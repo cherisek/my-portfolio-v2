@@ -1,4 +1,4 @@
-import downArrows from "../../images/downArrows.svg";
+import ArrowAnimation from "./ArrowAnimation";
 
 export const Header = () => {
   return (
@@ -8,9 +8,11 @@ export const Header = () => {
           <h1 className="header-title-intro">
             Hey, I’m Cherise Knox and I love bringing digital visions to life through web design.
           </h1>
-          <button className="about-me">
-            <img src={downArrows} alt="down-arrow" />
-            About Me
+          <button className="about-me-btn">
+            <span className="arrows-container">
+              <ArrowAnimation />
+            </span>
+            <span className="about-me-text">About Me</span>
           </button>
         </div>
       </div>
