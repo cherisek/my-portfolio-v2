@@ -1,5 +1,3 @@
-import React from "react";
-
 const ArrowAnimation = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" className="down-arrows">
