@@ -9,7 +9,7 @@ html, body {
   min-height: 100%;
 }
 
-.App {
+.content {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -17,7 +17,8 @@ html, body {
   max-width: 1100px;
   width: 100%; 
   min-height: 100vh; 
-  padding: 1rem;
+  padding: 1rem 1rem 0rem 1rem;
+  background-color: #dcdcdc;
   font-family: "Public Sans", sans-serif;
 }
 
@@ -36,12 +37,21 @@ html, body {
   }
 }
 
+.border-button {
+  border: 1px solid #33323d;
+  background-color: transparent;
+  width: 202px; 
+  height: 48px;
+  cursor: pointer;
+}
+
 /* navigation */
 
 .navigation-container {
   display: flex; 
   justify-content: flex-end;
-  margin: 2rem 0rem;
+  padding: 2rem 2rem 0rem 2rem;
+  margin-bottom: 2rem;
 
   .logo {
     width: 50px;
@@ -208,7 +218,7 @@ header {
   }
 }
 
-.content {
+.profile-content {
   flex: 1;
 }
 
@@ -216,9 +226,15 @@ header {
 
 .profile-container {
   display: flex;
+  flex-direction: column;
   font-family: "Public sans";
   justify-content: space-between;
   text-align: left;
+
+  .about-me-container {
+    display: flex; 
+    justify-content: space-between;
+  }
 
   .profile-img {
     width: 350px; 
@@ -291,12 +307,18 @@ header {
     }
   }
 
-  .portfolio-button {
-    border: 1px solid #33323d;
-    background-color: transparent;
-    width: 202px; 
-    height: 48px;
-    cursor: pointer;
+  .contact-me-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2rem;
+  } 
+
+  .lines-contact {
+    width: 534px; 
+    height: 1px; 
+    margin-right: 4rem;
+    border: 1px solid #eaeaeb; 
   }
 }
 
@@ -307,7 +329,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
 
   .social-container {
     display: flex;
