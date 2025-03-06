@@ -7,6 +7,7 @@
 html, body {
   height: 100%;
   min-height: 100%;
+  background-color: #dcdcdc;
 }
 
 .content {
@@ -18,7 +19,6 @@ html, body {
   width: 100%; 
   min-height: 100vh; 
   padding: 1rem 1rem 0rem 1rem;
-  background-color: #dcdcdc;
   font-family: "Public Sans", sans-serif;
 }
 
@@ -90,6 +90,10 @@ html, body {
         text-transform: uppercase;
         letter-spacing: 2px;
       }
+
+      a:hover, .active-link {
+        color: #5fb4a2;
+      }
     } 
   }
 
@@ -140,8 +144,8 @@ header {
   background-size: cover;
   background-position: top center;
   border-radius: 6px;
-  height: 60vh;
-  max-height: 60vh;
+  height: 80vh;
+  max-height: 80vh;
   margin-bottom: 4rem;
   position: relative;
 
@@ -154,7 +158,7 @@ header {
     border-radius: 6px;
     position: absolute;
     padding: 0 1rem 4rem 1rem;
-    top: 21vh; 
+    bottom: 0; 
     display: flex; 
     align-items: center;
   }
@@ -320,6 +324,44 @@ header {
     margin-right: 4rem;
     border: 1px solid #eaeaeb; 
   }
+}
+
+/* portfolio */
+
+.iab-portfolio-container {
+  display: flex; 
+  justify-content: space-between;
+  width: 100%; 
+  margin: 0 auto; 
+  max-width: 1100px;
+
+  .lines {
+    width: 100%; 
+    height: 2px;
+    background-color: #eaeaeb;
+  }
+
+  .inner-container {
+    margin: 1.5rem;
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+
+  .iab-description {
+    width: 350px;
+    max-width: 350px;
+  }
+
+  p {
+    margin-bottom:  2rem;
+  }
+}
+
+.portfolio-iab-img {
+  width: 540px; 
+  height: 400px;
 }
 
 /* footer */

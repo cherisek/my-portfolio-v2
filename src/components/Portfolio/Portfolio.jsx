@@ -1,7 +1,9 @@
+import { Iab } from './Iab/Iab'; 
+
 export const Portfolio = () => {
   return (
-    <>
-      <h1>here</h1>
-    </>
+    <div className="portfolio-container">
+      <Iab />
+    </div>
   )
 }

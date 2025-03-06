@@ -21,8 +21,8 @@ function Home() {
 
   return (
     <div className="App">
+      <Header scrollToAboutMe={scrollToAboutMe} />
       <div className="content">
-        <Header scrollToAboutMe={scrollToAboutMe} />
         <div className="profile-content" ref={aboutMeRef} >
           <Profile />
         </div>

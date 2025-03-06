@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../images/logo.png";
 import hamburger from "../../images/hamburger.svg";
 import close from "../../images/close.svg";
@@ -17,8 +17,20 @@ export const Navigation = () => {
         />
         <div className={`navigation-links ${isOpen ? "open" : ""}`}>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/portfolio">Portfolio</Link></li>
+            <li>
+              <NavLink to="/" 
+                className={({ isActive }) => isActive ? "active-link" : ""}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/portfolio"  
+                className={({ isActive }) => isActive ? "active-link" : ""}
+              >
+                  Portfolio
+              </NavLink>
+            </li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
